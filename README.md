@@ -1,2 +1,2 @@
 # encryptimage
-A simple yet effective image encrypting algorithm
+*A simple yet effective image encrypting algorithm*
