@@ -103,6 +103,7 @@ class EngineUI(object):
         self.currentImage = image
         pixmap = QPixmap(image)
         self.label.setPixmap(pixmap)
+        self.label.setScaledContents(True)
         QtCore.QCoreApplication.processEvents()
     def setImageForDecrypt(self):
         QtCore.QCoreApplication.processEvents()
@@ -112,17 +113,23 @@ class EngineUI(object):
     def beginEncryption(self):
         QtCore.QCoreApplication.processEvents()
         e = EncryptEngine.EncryptEngine()
-        if self.primesEnter.text() == "":
-            e.encrypt(self.data.toPlainText(), self.currentImage, self.currentImage + ".bmp")
+
+        if self.currentImage == "":
+            print("Image needed!")
         else:
-            e.setPrimes(int(self.primesEnter.text()))
-            e.encrypt(self.data.toPlainText(), self.currentImage, self.currentImage + ".bmp")
+            if self.primesEnter.text() == "":
+                e.encrypt(self.data.toPlainText(), self.currentImage, self.currentImage + ".bmp")
+            else:
+                e.setPrimes(int(self.primesEnter.text()))
+                e.encrypt(self.data.toPlainText(), self.currentImage, self.currentImage + ".bmp")
     def beginDecryption(self):
         QtCore.QCoreApplication.processEvents()
         e = EncryptEngine.EncryptEngine()
-        if self.primes_Decrypt.text() == "":
-            self.output.setText(e.decode(self.currentImageDec))
+        if self.currentImageDec == "":
+            print("Image needed!")
         else:
-
-            e.setPrimes(int(self.primes_Decrypt.text()))
-            self.output.setText(e.decode(self.currentImageDec))
+            if self.primes_Decrypt.text() == "":
+                e.encrypt(self.data.toPlainText(), self.currentImage, self.currentImage + ".bmp")
+            else:
+                e.setPrimes(int(self.primes_Decrypt.text()))
+                e.decode(self.currentImageDec)
