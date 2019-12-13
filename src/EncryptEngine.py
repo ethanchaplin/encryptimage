@@ -1,9 +1,13 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 from PIL import Image
-class EncryptEngine():
 
+
+class EncryptEngine:
 
     def __init__(self):
-       self.numPrimes = 1000
+        self.numPrimes = 1000
+
     def setPrimes(self, n):
         self.numPrimes = n
 
@@ -11,7 +15,12 @@ class EncryptEngine():
         _hex = str(hex)
         return [_hex[i:i + 6].zfill(6) for i in range(0, len(_hex), 6)]
 
-    def locate(self, height, width, position):
+    def locate(
+        self,
+        height,
+        width,
+        position,
+        ):
 
         rw = 0
         for x in range(height + 1):
@@ -25,6 +34,7 @@ class EncryptEngine():
             return [position, 0]
         else:
             return [position - rw * width, rw]
+
     def hexToRGB(self, hex):
         _hex = str(hex)
         if len(_hex) > 6:
@@ -32,7 +42,8 @@ class EncryptEngine():
                             )
         else:
             rslt = [_hex[i:i + 2] for i in range(0, len(_hex), 2)]
-            return [int(rslt[0], 16), int(rslt[1], 16), int(rslt[2], 16)]
+            return [int(rslt[0], 16), int(rslt[1], 16), int(rslt[2],
+                    16)]
 
     def rgbToHex(self, colorArray):
         return '%02x%02x%02x' % (colorArray[0], colorArray[1],
@@ -60,10 +71,15 @@ class EncryptEngine():
 
         return lst
 
-    def encrypt(self, data, image, output):
+    def encrypt(
+        self,
+        data,
+        image,
+        output,
+        ):
         dataPoint = 0
-        greenDataPoint=0
-        redDataPoint=0
+        greenDataPoint = 0
+        redDataPoint = 0
         prevLocation = 0
         s = data.encode('utf-8')
         c = self.colorify(s.hex())
@@ -78,10 +94,12 @@ class EncryptEngine():
 
         for x in c:
             location = primes[dataPoint] + prevLocation
+
             pixels[self.locate(img.size[1], img.size[0], location)[0],
-                   self.locate(img.size[1], img.size[0], location)[1]] = \
-                (self.hexToRGB(c[dataPoint])[0], self.hexToRGB(c[dataPoint])[1],
-                 self.hexToRGB(c[dataPoint])[2])
+                   self.locate(img.size[1], img.size[0],
+                   location)[1]] = (self.hexToRGB(c[dataPoint])[0],
+                                    self.hexToRGB(c[dataPoint])[1],
+                                    self.hexToRGB(c[dataPoint])[2])
             prevLocation = location
             dataPoint = 1 + dataPoint
         if dataPoint > 255:
@@ -104,9 +122,10 @@ class EncryptEngine():
         numIterations = pixels[0, 0][2]
         for x in range(numIterations):
             location = primes[dataPoint] + prevLocation
-            final.append(self.rgbToHex(pixels[self.locate(img.size[1], img.size[0],
-                                                location)[0], self.locate(img.size[1], img.size[0],
-                                                                     location)[1]]))
+            final.append(self.rgbToHex(pixels[self.locate(img.size[1],
+                         img.size[0], location)[0],
+                         self.locate(img.size[1], img.size[0],
+                         location)[1]]))
             prevLocation = location
             dataPoint = 1 + dataPoint
         for y in final:
