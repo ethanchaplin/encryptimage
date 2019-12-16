@@ -6,9 +6,9 @@ This application was designed to secretly encode data into an image, but in a mo
 
 This project has two parts to it
 
-*The Engine
+* The Engine
 
-*The GUI
+* The GUI
 
 ## Getting Started
 
