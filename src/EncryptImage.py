@@ -170,3 +170,4 @@ class EngineUI(object):
             else:
                 e.setPrimes(int(self.primes_Decrypt.text()))
                 self.output.setText(e.decode(self.currentImageDec))
+

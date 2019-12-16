@@ -22,7 +22,7 @@ from PyQt5 import QtWidgets
 
 if __name__ == '__main__':
     import sys
-    app = QtWidgets.QApplication(sys.argv) # initializes PyQt Window
+    app = QtWidgets.QApplication(sys.argv)  # initializes PyQt Window
     MainWindow = QtWidgets.QMainWindow()  # Loads main window
     ui = EncryptImage.EngineUI()
     ui.setupUi(MainWindow)  # Assigns the EncryptImage UI to the main window
