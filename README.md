@@ -2,6 +2,14 @@
 
 This application was designed to secretly encode data into an image, but in a more unorthadox way. Instead of conventional stegonography techinques, this program encodes the data individually into distinct pixels. The pixels are then scattered arbitrarily across the given image. Depending on the size of the given image, the encoded pixels will be almost impossible to distinguish from the naked eye.
 
+## About
+
+This project has two parts to it
+
+*The Engine
+
+*The GUI
+
 ## Getting Started
 
 ### Prerequisites
