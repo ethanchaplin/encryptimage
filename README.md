@@ -20,7 +20,7 @@ It works in the following steps:
 1. The user inputs a string of text and an image to manipulate
 1. The text is converted to hexadecimal
 1. The resulting hexadecimal is chunked into sections of six, and if one of the chunks is too small, it is padded with zeroes to the left.
-1. The chunks of six are turned into RGB tuples. *E.G. FFFFFF would become (255, 255, 255) or A5DF2C would become (165,223,44).*
+1. The chunks of six are turned into RGB tuples. *E.G. FFFFFF would become (255, 255, 255), or A5DF2C would become (165,223,44).*
 1. Specific pixels are selected across the image, and their color is changed to the RGB tuple of the corresponding data.
 1. The color of the pixel in the top left corner is changed to match how many points of data were encoded. *E.G. if three pixels are encoded in the image, the value of the corner pixel will be (0, 0, 3).*
 
