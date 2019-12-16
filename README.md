@@ -1,88 +1,62 @@
-# Project Title
+# Visual Data Encrypter
 
-One Paragraph of project description goes here
+This application was designed to secretly encode data into an image, but in a more unorthadox way. Instead of conventional stegonography techinques, this program encodes the data individually into distinct pixels. The pixels are then scattered arbitrarily across the given image. Depending on the size of the given image, the encoded pixels will be almost impossible to distinguish from the naked eye.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
 ### Prerequisites
 
-What things you need to install the software and how to install them
+For this project you will need
 
 ```
-Give examples
+Python 3.8
+PyQt5
+PILlow
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+You will need to set up a pipenv enviroment to build this project.
 
-Say what the step will be
+#### Installing pipenv
 
-```
-Give the example
-```
-
-And repeat
+First, you need to install pipenv through pip
 
 ```
-until finished
+pip install pipenv
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+Ta-da!
 
-## Running the tests
+#### Initializing pipenv
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+In your project folder, run
 
 ```
-Give an example
+pipenv sync
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
+This will sync the required modules with your project. Next, start a pipenv shell within your project. This is done by
 
 ```
-Give an example
+pipenv shell
 ```
 
-## Deployment
+#### Running the project
 
-Add additional notes about how to deploy this on a live system
+Now that you have a pipenv shell running, all you have to do is run the file like you would any other python script
 
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+```
+python main.py
+```
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Ethan Chaplin** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GNU License - see the [LICENSE](LICENSE.md) file for details
 
-## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
 
