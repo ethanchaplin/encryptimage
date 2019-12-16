@@ -52,7 +52,7 @@ python main.py
 
 ## Authors
 
-* **Ethan Chaplin** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Ethan Chaplin** - *Initial work* - [Ethan Chaplin](https://github.com/EthanChaplin)
 
 ## License
 
