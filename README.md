@@ -1,6 +1,6 @@
 # Visual Data Encrypter
 
-This application was designed to secretly encode data into an image, but in a more unorthadox way. Instead of conventional stegonography techinques, this program encodes the data individually into distinct pixels. The pixels are then scattered arbitrarily across the given image. Depending on the size of the given image, the encoded pixels will be almost impossible to distinguish from the naked eye.
+This application was designed to secretly encode data into an image, but in a more unorthadox than is typically used. Instead of conventional stegonography techinques, this program encodes the data individually into distinct pixels. The pixels are then scattered arbitrarily across the given image. Depending on the size of the given image, the encoded pixels will be almost impossible to distinguish from the naked eye.
 
 ## About
 
