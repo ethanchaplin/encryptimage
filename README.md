@@ -10,6 +10,12 @@ This project has two parts to it
 
 * The GUI
 
+### The Engine
+
+The [engine](/src/EncryptEngine.py)
+
+### The GUI
+
 ## Getting Started
 
 ### Prerequisites
