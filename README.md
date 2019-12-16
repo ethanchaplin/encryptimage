@@ -20,7 +20,7 @@ You will need to set up a pipenv enviroment to build this project.
 
 #### Installing pipenv
 
-First, you need to install pipenv through pip
+First, you need to install pipenv through pip:
 
 ```
 pip install pipenv
@@ -30,13 +30,13 @@ Ta-da!
 
 #### Initializing pipenv
 
-In your project folder, run
+In your project folder, run:
 
 ```
 pipenv sync
 ```
 
-This will sync the required modules with your project. Next, start a pipenv shell within your project. This is done by
+This will sync the required modules with your project. Next, start a pipenv shell within your project. This is done by:
 
 ```
 pipenv shell
@@ -44,7 +44,7 @@ pipenv shell
 
 #### Running the project
 
-Now that you have a pipenv shell running, all you have to do is run the file like you would any other python script
+Now that you have a pipenv shell running, all you have to do is run the file like you would any other python script:
 
 ```
 python main.py
