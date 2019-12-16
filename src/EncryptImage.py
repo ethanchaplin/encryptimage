@@ -143,8 +143,7 @@ class EngineUI(object):
             print("Image needed!")
         else:
             if self.primes_Decrypt.text() == '':
-                e.encrypt(self.data.toPlainText(), self.currentImage,
-                          self.currentImage + '.bmp')
+                self.output.setText(e.decode(self.currentImageDec))
             else:
                 e.setPrimes(int(self.primes_Decrypt.text()))
-                e.decode(self.currentImageDec)
+                self.output.setText(e.decode(self.currentImageDec))
