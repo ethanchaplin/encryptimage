@@ -63,7 +63,7 @@ class EncryptEngine:
             (2) * (    5    ) + (1) = 11, which corresponds to the table above. 
             row   num of rows   col
             
-            This will work for any image at any size. 
+            This will work for any image of any size. 
             """
             if x * width > position:
                 rw = x - 1
